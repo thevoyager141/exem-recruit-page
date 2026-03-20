@@ -1,0 +1,257 @@
+/* ── Reset & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #e8f0fe;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+/* ── Hero Section ── */
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #e74c3e, #0ea5e9);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Section Common ── */
+.section {
+  width: 90%;
+  max-width: 720px;
+  margin: 40px auto;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ── Team Intro Card ── */
+.team-intro {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.team-intro h3 {
+  font-size: 1.2rem;
+  color: #4f46e5;
+  margin-bottom: 12px;
+}
+
+.team-intro p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.team-intro ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-intro ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #e74c3e;
+}
+
+.team-intro ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #e74c3e;
+}
+
+/* ── Profile Cards Grid ── */
+.cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.avatar--recruiter {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.avatar--branding {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card .role {
+  font-size: 0.85rem;
+  color: #7c3aed;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card .company {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.divider {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  border-radius: 2px;
+  margin: 0 auto 12px;
+}
+
+.card .desc {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #ede9fe;
+  color: #6366f1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ── Coffee Chat Button ── */
+.btn-coffee {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-coffee:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ── CTA Section ── */
+.cta {
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+.cta p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
