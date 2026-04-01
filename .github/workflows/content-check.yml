@@ -1,0 +1,38 @@
+name: EXEM Content Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check blog-output.md
+        run: |
+          echo "검수 시작: blog-output.md"
+          if [ -f "blog-output.md" ]; then
+            CHAR_COUNT=$(wc -m < "blog-output.md" | tr -d ' ')
+            echo "글자 수: ${CHAR_COUNT}자"
+            if [ "$CHAR_COUNT" -gt 5000 ]; then
+              echo "경고: 5,000자 초과! (${CHAR_COUNT}자)"
+              exit 1
+            else
+              echo "글자 수 통과"
+            fi
+            FORBIDDEN_WORDS="이다솜 김민아 전현지 박예영"
+            for WORD in $FORBIDDEN_WORDS; do
+              if grep -q "$WORD" "blog-output.md"; then
+                echo "금칙어 발견: $WORD"
+                exit 1
+              fi
+            done
+            echo "금칙어 없음"
+            echo "검수 통과"
+          else
+            echo "blog-output.md 파일이 없습니다. 건너뜁니다."
+          fi
